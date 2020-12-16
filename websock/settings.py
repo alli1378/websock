@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'channels',
     # my app
-    'echo'
+    'echo',
 ]
 
 MIDDLEWARE = [
@@ -70,8 +70,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'websock.wsgi.application'
-
+# WSGI_APPLICATION = 'websock.wsgi.application'
+# channels
+ASGI_APPLICATION = 'websock.routing.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
